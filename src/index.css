@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,12 +34,113 @@ nav ul {
 }
 
 nav li {
-  margin: 0 1rem;
   cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.search-button {
+  margin: 1rem;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.search-button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+.nav-link {
+  margin: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #FF512F;
 }
 
 .news-image {
   max-width: 100%;
   height: auto;
   margin: 1rem 0;
+}
+
+.search-container {
+  position: absolute;
+  top: 60px; /* adjust as needed */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.search-container li {
+  margin: 10px 0;
+}
+
+.search-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.news-link {
+  margin: 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  color: #FF512F;
+}
+
+.news-image {
+  max-width: 550px;
 }
