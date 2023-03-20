@@ -13,11 +13,11 @@ const NewsProvider = ({ children }) => {
   }, [data]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="feed-container">Loading...</div>;
   }
 
   if (error) {
-    return <div>Something went wrong: {error}</div>;
+    return <div className="feed-container">Something went wrong: {error}</div>;
   }
 
   return (

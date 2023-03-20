@@ -38,7 +38,7 @@ const Header = () => {
         <div className="search-container">
           <Search />
           <button className="close-button" onClick={closeSearch}>
-            Close
+            x
           </button>
         </div>
       )}

@@ -43,7 +43,7 @@ const Search = () => {
 
   return (
     <div className="search-popup">
-      <input type="text" value={searchTerm} onChange={handleSearch} />
+      <input className="search-input" type="text" value={searchTerm} onChange={handleSearch} />
       <div className="search-results">
         <ul>
           {searchResults.map((result) => (

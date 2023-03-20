@@ -17,11 +17,11 @@ const NewsFeed = () => {
   }, [data]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="feed-container">Loading...</div>;
   }
 
   if (error) {
-    return <div>Something went wrong: {error}</div>;
+    return <div className="feed-container">Something went wrong: {error}</div>;
   }
 
   const newsPerPage = 10;
@@ -47,7 +47,7 @@ const NewsFeed = () => {
         <h3>{date}</h3>
         <ul>
           {newsByDate[date].map((news) => (
-            <Link to={{ pathname: `/news/${news._id}` }}>
+            <Link to={{ pathname: `/news/${news._id}` }} class="news-link">
               <li key={news._id}>{news.article}</li>
             </Link>
           ))}
@@ -56,12 +56,12 @@ const NewsFeed = () => {
     ));
 
   return (
-    <>
+    <div className="feed-container">
       {displayedNews}
       {currentPage < totalPages && (
-        <button onClick={handleLoadMore}>Show Older News</button>
+        <button className="search-button" onClick={handleLoadMore}>Show Older News</button>
       )}
-    </>
+    </div>
   );
 };
 

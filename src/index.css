@@ -5,6 +5,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #222;
 }
 
 code {
@@ -23,25 +24,26 @@ header {
 
 .logo {
   height: 70px;
-  margin-right: 1rem;
+  margin: 0 2rem;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 2rem;
 }
 
 nav li {
   cursor: pointer;
-  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: larger;
 }
 
 .search-button {
-  margin: 1rem;
+  margin-right: 1rem;
   padding: 15px 30px;
   text-align: center;
   text-transform: uppercase;
@@ -49,9 +51,9 @@ nav li {
   background-size: 200% auto;
   color: white;
   border-radius: 10px;
-  display: block;
   border: 0px;
   font-weight: 700;
+  font-size: larger;
   box-shadow: 0px 0px 14px -7px #f09819;
   background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
   cursor: pointer;
@@ -71,9 +73,10 @@ nav li {
 }
 
 .nav-link {
-  margin: 1rem;
   color: white;
   text-decoration: none;
+  margin: 0 2rem;
+
 }
 
 .nav-link:hover {
@@ -88,7 +91,7 @@ nav li {
 
 .search-container {
   position: absolute;
-  top: 60px; /* adjust as needed */
+  top: 5rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -96,8 +99,14 @@ nav li {
   max-width: 600px;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-input {
+  width: 90%;
+  height: 2rem;
+  margin: 10px 20px;
 }
 
 .search-container ul {
@@ -125,15 +134,39 @@ nav li {
 }
 
 .section-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 3rem;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.news-container-first {
+  margin: 1rem;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 1px solid;
+}
+
+.news-container-important {
+  margin: 1rem;
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 1px solid;
+}
+
+.news-container {
+  margin: 1rem;
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 1px solid;
 }
 
 .news-link {
-  margin: 1rem;
-  color: black;
+  color: #222;
   text-decoration: none;
 }
 
@@ -141,6 +174,37 @@ nav li {
   color: #FF512F;
 }
 
+.news-container-image {
+  text-align: center;
+}
+
 .news-image {
-  max-width: 550px;
+  max-width: 90%;
+  height: auto;
+}
+
+.id-container {
+  margin: 0 3rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.feed-container {
+  margin: 0 3rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.feed-container ul {
+  list-style: none;
+  padding: 0;
+  font-size: x-large;
+  margin: 20px 0 0 0;
+}
+
+.feed-container li {
+  margin-bottom: 10px;
 }
