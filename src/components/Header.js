@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-import white from "./white.svg";
+import logo from "../images/logo.svg";
+import loop from "../images/loop.svg";
+import rss from "../images/rss.svg";
+import donate from "../images/donate.svg";
 
 const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -17,7 +20,7 @@ const Header = () => {
   return (
     <header>
       <Link to="/">
-        <img className="logo" src={white} alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
       </Link>
       <nav>
         <ul>

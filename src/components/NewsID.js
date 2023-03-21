@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import NewsContext from "./utils/NewsContext";
+import NewsContext from "../utils/NewsContext";
 
 const NewsID = () => {
   const { news } = useContext(NewsContext);

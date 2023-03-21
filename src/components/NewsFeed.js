@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import useFetch from "./utils/useFetch";
+import useFetch from "../utils/useFetch";
 
 const NewsFeed = () => {
   const [allNews, setAllNews] = useState([]);
@@ -35,7 +35,7 @@ const NewsFeed = () => {
     return acc;
   }, {});
 
-  const handleLoadMore = () => {
+  const loadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
@@ -59,7 +59,7 @@ const NewsFeed = () => {
     <div className="feed-container">
       {displayedNews}
       {currentPage < totalPages && (
-        <button className="search-button" onClick={handleLoadMore}>Show Older News</button>
+        <button className="search-button" onClick={loadMore}>Show Older News</button>
       )}
     </div>
   );

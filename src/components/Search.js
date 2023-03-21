@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import useFetch from "./utils/useFetch";
+import useFetch from "../utils/useFetch";
 import Fuse from "fuse.js";
 
 const Search = () => {

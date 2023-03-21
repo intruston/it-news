@@ -76,7 +76,6 @@ nav li {
   color: white;
   text-decoration: none;
   margin: 0 2rem;
-
 }
 
 .nav-link:hover {
@@ -162,7 +161,7 @@ nav li {
   width: 30%;
   margin-bottom: 20px;
   background-color: white;
-  border-bottom: 1px solid;
+  font-size: smaller;
 }
 
 .news-link {
@@ -181,6 +180,49 @@ nav li {
 .news-image {
   max-width: 90%;
   height: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+.column {
+  flex:1;
+  margin: 2rem;
+}
+
+.column:nth-child(3) {
+  flex: 2;
+}
+
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ftr-link {
+  color: white;
+  text-decoration: none;
+}
+
+.ftr-link:hover {
+  color: #FF512F;
+}
+
+.footer-input {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 .id-container {
@@ -207,4 +249,26 @@ nav li {
 
 .feed-container li {
   margin-bottom: 10px;
+}
+
+.about-container {
+  height: 300px;
+  margin: 0 3rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  width: 300px;
+  height: auto;
+  flex: 1;
+}
+
+.about-container-text {
+  margin: 0 2rem;
+  text-align: justify;
+  flex: 2;
 }

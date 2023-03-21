@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NewsList from './NewsList';
-import Header from './Header';
-import NewsFeed from './NewsFeed';
-import Search from './Search';
-import NewsID from './NewsID';
+import NewsList from './components/NewsList';
+import Header from './components/Header';
+import NewsFeed from './components/NewsFeed';
+import Search from './components/Search';
+import NewsID from './components/NewsID';
 import NewsProvider from './utils/NewsProvider';
-import Footer from './Footer';
+import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/newsfeed" element={<NewsFeed />} />
         <Route path="/search" element={<Search />} />
         <Route path="/news/:id" element={<NewsID />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>

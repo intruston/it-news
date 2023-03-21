@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import NewsContext from "./utils/NewsContext";
+import NewsContext from "../utils/NewsContext";
 
 const NewsList = () => {
   const { news } = useContext(NewsContext);
