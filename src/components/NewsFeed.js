@@ -59,7 +59,7 @@ const NewsFeed = () => {
     <div className="feed-container">
       {displayedNews}
       {currentPage < totalPages && (
-        <button className="search-button" onClick={loadMore}>Show Older News</button>
+        <button className="subscribe-button" onClick={loadMore}>Show Older News</button>
       )}
     </div>
   );

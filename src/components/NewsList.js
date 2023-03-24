@@ -52,7 +52,7 @@ const NewsList = () => {
           >
             <h2>{newsItem.article}</h2>
           </Link>
-          <p>{getTimeDifference(newsItem.publishing_time)}</p>
+          <p className="grey">{getTimeDifference(newsItem.publishing_time)}</p>
           {newsItem.image && (index === 0 || newsItem.important) && (
             <div className="news-container-image">
               <img

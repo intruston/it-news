@@ -44,7 +44,7 @@ function Footer() {
               value={email}
               onChange={emailChange}
             />
-            <button className="search-button" type="submit">Subscribe</button>
+            <button className="subscribe-button" type="submit">Subscribe</button>
           </form>
         )}
       </div>

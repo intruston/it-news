@@ -14,8 +14,8 @@ const NewsID = () => {
   return (
     <div className="id-container">
       <h1>{currentNews.article}</h1>
-      <p>{`Author: ${currentNews.author}`}</p>
-      <p>{`Publishing time: ${new Date(
+      <p className="grey">{`Author: ${currentNews.author}`}</p>
+      <p className="grey">{`Publishing time: ${new Date(
         currentNews.publishing_time
       ).toLocaleDateString()} ${new Date(
         currentNews.publishing_time
