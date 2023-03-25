@@ -38,13 +38,7 @@ const NewsList = () => {
       {sortedNews.map((newsItem, index) => (
         <div
           key={newsItem._id}
-          className={
-            index === 0
-              ? "news-container-first"
-              : newsItem.important
-              ? "news-container-important"
-              : "news-container"
-          }
+          className={`news-container-${index}`}
         >
           <Link
             to={{ pathname: `/news/${newsItem._id}` }}
@@ -64,6 +58,7 @@ const NewsList = () => {
           )}
         </div>
       ))}
+    <button className="feed-button"><Link to="/newsfeed" className="ftr-link">News feed</Link></button>
     </div>
   );
 };

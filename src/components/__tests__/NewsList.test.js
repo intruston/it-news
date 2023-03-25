@@ -41,7 +41,7 @@ describe("NewsList", () => {
 
     expect(getByText("12 Hidden iPhone Features More People Should Be Using")).toBeInTheDocument();
     expect(getByText("Got a New iPhone? Here's How to Take Your Best Photos Ever")).toBeInTheDocument();
-    expect(getByText("12 Hidden iPhone Features More People Should Be Using").closest(".news-container-first")).toBeTruthy();
+    expect(getByText("12 Hidden iPhone Features More People Should Be Using").closest(".news-container-0")).toBeTruthy();
   });
 
   test("renders news images for important and first items", () => {
