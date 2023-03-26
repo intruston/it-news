@@ -221,6 +221,11 @@ nav li {
   color:#A8A8A8;
 }
 
+.main-text {
+  text-align: justify;
+  margin: 1rem 6rem;
+}
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -320,37 +325,6 @@ nav li {
   margin-bottom: 10px;
 }
 
-.feed-button {
-  margin: 4rem 1rem 1rem auto;
-  height: 50px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  border: 0px;
-  font-weight: 700;
-  font-size: larger;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.feed-button:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.feed-button:active {
-  transform: scale(0.95);
-}
-
 .about-container {
   margin: 0 3rem;
   background-color: white;
@@ -444,10 +418,6 @@ nav li {
 
   .feed-container ul {
     font-size: smaller;
-  }
-
-  .feed-button {
-    margin: 0 0 5px 40px;
   }
 
   footer {

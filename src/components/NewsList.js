@@ -21,7 +21,7 @@ const NewsList = () => {
   };
 
   // Sort news items based on importance and publishing time
-  const sortedNews = news.sort((a, b) => {
+  const sortedNews = [...news].sort((a, b) => {
     // First, sort by importance
     if (a.important && !b.important) {
       return -1; // a comes first
@@ -58,7 +58,6 @@ const NewsList = () => {
           )}
         </div>
       ))}
-    <button className="feed-button"><Link to="/newsfeed" className="ftr-link">News feed</Link></button>
     </div>
   );
 };

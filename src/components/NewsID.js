@@ -27,7 +27,7 @@ const NewsID = () => {
           src={currentNews.image}
         />
       </div>
-      <p>{currentNews.text}</p>
+      <p className="main-text" dangerouslySetInnerHTML={{__html: currentNews.text}}></p>
     </div>
   );
 };
