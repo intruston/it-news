@@ -6,6 +6,7 @@ import NewsFeed from './components/NewsFeed';
 import Search from './components/Search';
 import NewsID from './components/NewsID';
 import NewsProvider from './utils/NewsProvider';
+import AllNewsProvider from './utils/AllNewsProvider';
 import Footer from './components/Footer';
 import About from './components/About';
 
@@ -16,9 +17,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<NewsList />} />
-        <Route path="/newsfeed" element={<NewsFeed />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/news/:id" element={<NewsID />} />
+        <Route path="/newsfeed" element={<AllNewsProvider><NewsFeed /></AllNewsProvider>} />
+        <Route path="/news/:id" element={<AllNewsProvider><NewsID /></AllNewsProvider>} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

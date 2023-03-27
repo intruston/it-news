@@ -1,32 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import useFetch from "../utils/useFetch";
+import NewsContext from "../utils/NewsContext";
 
 const NewsFeed = () => {
-  const [allNews, setAllNews] = useState([]);
+  const { news } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { data, loading, error } = useFetch(
-    "https://eu-central-1.aws.data.mongodb-api.com/app/data-owhxg/endpoint/allnews"
-  );
-
-  useEffect(() => {
-    if (data) {
-      setAllNews(data);
-    }
-  }, [data]);
-
-  if (loading) {
-    return <div className="feed-container">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="feed-container">Something went wrong: {error}</div>;
-  }
-
   const newsPerPage = 10;
-  const totalPages = Math.ceil(allNews.length / newsPerPage);
-  const newsByDate = allNews.reduce((acc, news) => {
+  const totalPages = Math.ceil(news.length / newsPerPage);
+  const newsByDate = news.reduce((acc, news) => {
     const date = new Date(news.publishing_time);
     const options = { weekday: "long", month: "long", day: "numeric" };
     const formattedDate = date.toLocaleDateString("en-US", options);
@@ -47,7 +29,7 @@ const NewsFeed = () => {
         <h3>{date}</h3>
         <ul>
           {newsByDate[date].map((news) => (
-            <Link to={{ pathname: `/news/${news._id}` }} class="news-link">
+            <Link to={{ pathname: `/news/${news._id}` }} className="news-link" key={news._id}>
               <li key={news._id}>{news.article}</li>
             </Link>
           ))}

@@ -6,7 +6,7 @@ import NewsList from "../NewsList";
 
 //Test checks:
 //that news items are rendered in the correct order based on their importance and publishing time.
-//that news images are rendered only for the important and first news items.
+//that news images are rendered only for the important items.
 
 describe("NewsList", () => {
   const news = [
