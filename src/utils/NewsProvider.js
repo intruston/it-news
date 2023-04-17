@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useFetch from './useFetch';
 import NewsContext from './NewsContext';
 
 const NewsProvider = ({ children }) => {
   const { data, loading, error } = useFetch('https://eu-central-1.aws.data.mongodb-api.com/app/data-owhxg/endpoint/news');
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    if (data) {
-      setNews(data);
-    }
-  }, [data]);
 
   if (loading) {
     return <div className="feed-container">Loading...</div>;
@@ -21,7 +14,7 @@ const NewsProvider = ({ children }) => {
   }
 
   return (
-    <NewsContext.Provider value={{ news }}>
+    <NewsContext.Provider value={{ news:data }}>
       {children}
     </NewsContext.Provider>
   );
